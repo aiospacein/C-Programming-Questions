@@ -1,67 +1,99 @@
-/*
-Reverse a linked list.
 
-WTD: Traverse the list while reversing the next pointers of each node.
 
-(e.g.: I/P: 1->2->3; O/P: 3->2->1)
-
-author : Vaaarad07
-*/
-
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node {
-    int data;
-    struct node* ptr; 
-}node;
+typedef struct linklist_s {
+  char data;
+  struct linklist_s *head;
+} linklist_s;
 
-node* createlist(node* head, int data[],int n){
-    node* p;
-    for(int i = 0; i<n;i++){
-        if(head == NULL){
-            p = head = (node*)malloc(sizeof(node));
-            p->data = data[i];
-            p->ptr = NULL;
-        }
-        else{
-            p->ptr = (node*)malloc(sizeof(node));
-            p->ptr->data = data[i];
-            p = p->ptr;
-            p->ptr = NULL;
-        }
+bool insert(linklist_s **llPtr, char *data) {
+  linklist_s *node = (linklist_s *)malloc(sizeof(linklist_s));
+  if (node != NULL) {
+    node->data = *data;
+    if (*llPtr != NULL) {
+      node->head = *llPtr;
+      *llPtr = node;
+    } else {
+      *llPtr = node;
+      node->head = NULL;
     }
-    return head;
+    return true;
+  } else {
+    printf("Memory Full \n");
+    return 0;
+  }
 }
 
-void print(node* head){
-    node* p = head;
-    for(;p != NULL; p=p->ptr){
-        printf("data is: %d\n", p->data);
-    }
-}
- 
-node* reverse(node* head){
-    node* p = head;
-    node* q = p->ptr;
-    node* temp;
-    
-    while(q!=NULL){
-        temp = q->ptr;
-        q->ptr = p;
-        p=q;
-        q=temp;    
-    }
-    head->ptr = NULL;
-    return p;
+void delete(linklist_s **llPtr, char *data) {
+
+  linklist_s *prev = NULL, *temp = *llPtr;
+  while ((temp != NULL) && (temp->data != *data)) {
+    prev = temp;
+    temp = temp->head;
+  }
+
+  if (temp == NULL) {
+    printf("Elemnet Not Found \n");
+    return;
+  }
+  if (prev == NULL) {
+    *llPtr = temp->head;
+  } else {
+    prev->head = temp->head;
+  }
+  free(temp);
 }
 
+void printll(linklist_s *llPtr) {
+  while (llPtr != NULL) {
+    printf("Data is %c \n", llPtr->data);
+    llPtr = llPtr->head;
+  }
+}
 
-int main(){
-    node* head = NULL;
-    int data[] = {1,2,3};                      
-    int size = sizeof(data) / sizeof(data[0]);
-    head = createlist(head,data,size);
-    print(reverse(head));
+void reverse(linklist_s **llPtr) {
+  linklist_s *prev = NULL, *next = NULL, *temp = *llPtr;
+  while (temp != NULL) {
+    next = temp->head;
+    temp->head = prev;
+    prev = temp;
+    temp = next;
+  }
+  *llPtr = prev;
+}
+int main(void) {
+  linklist_s *head = NULL;
 
+  printf("--- Setup: Building Initial List ---\n");
+  insert(&head, "A");
+  insert(&head, "B");
+  insert(&head, "C");
+  insert(&head, "D");
+  printll(head); // Expected: D -> C -> B -> A
+
+  printf("\n--- Testcase 8: Reverse Populated List ---\n");
+  reverse(&head);
+  printll(head); // Expected: A -> B -> C -> D
+
+  printf("\n--- Testcase 9: Reverse Single Element List ---\n");
+  // Clearing down to 1 element ('A') for testing
+  delete(&head, "D");
+  delete(&head, "C");
+  delete(&head, "B");
+  printll(head); // Expected: A
+
+  reverse(&head);
+  printll(head); // Expected: A (Should stay the same)
+
+  printf("\n--- Testcase 10: Reverse Empty List ---\n");
+  delete(&head, "A");
+  printll(head); // Expected: List is empty.
+
+  reverse(&head);
+  printll(head); // Expected: List is empty. (Should safely do nothing)
+
+  return 0;
 }

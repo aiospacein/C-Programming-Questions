@@ -24,7 +24,6 @@ author: @8-bit-owl
 typedef struct node {
     int data;
     struct node* next;
-    int visited;
 }node;
 
 
@@ -35,6 +34,7 @@ int main(void)
     node *reference = head;
     int data[] = {1, 2, 3};
     int size = sizeof(data)/sizeof(data[0]);
+    
     for (int i = 0;i < size;i++)
     {
          head->data = data[i];

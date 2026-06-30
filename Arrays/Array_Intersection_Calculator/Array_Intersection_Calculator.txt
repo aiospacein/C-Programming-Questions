@@ -3,3 +3,9 @@ Determine the intersection of two integer arrays.
 WTD: Compare every element of the two arrays, listing down the common integers that appear in both.
 
 (e.g.: I/P: [1,2,4,5,6], [2,3,5,7], O/P: [2,5])
+
+| Approach          |                   Time | Extra memory | Best when                 |
+| ----------------- | ---------------------: | -----------: | ------------------------- |
+| Nested loops      |               `O(N×M)` |       `O(K)` | Literal/basic requirement |
+| Hash set          |    **O(N+M)** expected |       `O(N)` | Unsorted arrays, speed    |
+| Sort + 2 pointers | `O(N log N + M log M)` |          Low | Memory/cache efficiency   |
