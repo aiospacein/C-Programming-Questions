@@ -3,3 +3,11 @@ Remove duplicates from an array without using any library.
 WTD: Navigate through the array, identifying and removing any repetitive occurrences of numbers, ensuring each number appears only once.
 
 (e.g.: I/P: [1,1,2,2,3,4,4], O/P: [1,2,3,4])
+
+
+Input / requirement	                                Best approach
+Already sorted	                                    Two pointers — O(n)
+Unsorted, order doesn't matter	                    Sort + compact — O(n log n)
+Unsorted, preserve order, no extra memory	        In-place nested scan — O(n²)
+Unsorted, preserve order, extra memory allowed	    Hash set/frequency structure — O(n) average
+Values have a small known range	                    Boolean/frequency array — O(n + range)

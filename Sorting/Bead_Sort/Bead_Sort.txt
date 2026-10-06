@@ -5,3 +5,7 @@ WTD: Sort an array of non-negative integers using Bead Sort.
 Bead Sort: Also known as "Gravity Sort," it uses a grid to sort integers.  
 
 (e.g.: I/P: [5, 1, 4, 2, 8]; O/P: [1, 2, 4, 5, 8])
+
+
+Bead Sort (Gravity Sort)
+Simulates gravity to let "beads" fall down parallel rods. It works primarily for positive integers and runs in $O(S)$ visual hardware time (or $O(N \cdot \text{max\_val})$ software time).

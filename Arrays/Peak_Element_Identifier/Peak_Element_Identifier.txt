@@ -3,3 +3,21 @@ Find the peak element in an array (greater than or equal to its neighbors).
 WTD: Scrutinize the array to find an element that is both larger than its predecessor and its successor.
 
 (e.g.: I/P: [1, 3, 20, 4, 1, 0], O/P: 20 )
+
+if the goal is to find any peak (check uphill or down hill and devide it into half)
+Approach	        Time	Extra Space	Verdict
+Binary search	    O(log n)	O(1)	🥇 Best
+Linear scan	        O(n)	O(1)	🥈 Simplest
+Sort	            O(n log n)	Depends	❌ Unnecessary
+
+
+
+Find the largest peak / maximum element
+
+→ Binary search above doesn't solve that problem. You need to search for the maximum, which for an arbitrary unsorted array requires O(n) in the general case.
+
+Goal	Best approach
+Find any peak	Binary search — O(log n)
+Find first peak	Depends on definition
+Find largest peak	Linear scan — O(n)
+Find global maximum	Linear scan — O(n)

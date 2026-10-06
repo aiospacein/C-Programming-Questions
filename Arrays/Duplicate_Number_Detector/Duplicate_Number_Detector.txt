@@ -1,3 +1,11 @@
 Find the duplicate number on a given integer array.
 
 WTD: Inspect the provided array. Determine if there's any integer that appears more frequently than it should, signifying a duplicate.
+
+
+Situation	                                        Best approach
+Can modify array, want simple solution	            Sort + scan
+Arbitrary integers, want fast average performance	Hash set
+Values have a small known range	                    Frequency/boolean array
+n+1 values in [1,n], exactly one duplicate	        Floyd's cycle detection
+Cannot use extra memory and arbitrary values	    Sort + scan

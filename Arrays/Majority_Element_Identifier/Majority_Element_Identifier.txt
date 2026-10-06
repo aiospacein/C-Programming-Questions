@@ -3,3 +3,10 @@ Find the majority element in an array (appears more than n/2 times).
 WTD: Traverse the array and maintain a count of each number. Identify if there's any number that appears more than half the length of the array.
 
 (e.g.: I/P: [3,3,4,2,4,4,2,4,4], O/P: 4 )
+
+
+Approach	                Time	    Space	Verdict
+Boyer–Moore Voting	        O(n)	    O(1)	🥇 Best
+Hash map / frequency table	O(n) avg.	O(n)	🥈
+Sort + count	            O(n log n)	O(1)*	🥉
+Nested counting	            O(n²)	    O(1)	❌

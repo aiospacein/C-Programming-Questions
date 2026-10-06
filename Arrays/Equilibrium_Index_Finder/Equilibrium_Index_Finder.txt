@@ -3,3 +3,9 @@ Find the equilibrium index of an array (where sum of elements on the left is equ
 WTD: Examine the array to find an index where the sum of all elements to its left is equal to the sum of all elements to its right.
 
 (e.g.: I/P: [-7, 1, 5, 2, -4, 3, 0], O/P: 3)
+
+
+Approach	                                Time	Space	Reliable with negatives?
+Recalculate left/right sums at every index	O(n²)	O(1)	✅
+Your two-pointer approach	                O(n) potentially	O(1)	❌ Not generally reliable
+Total sum + running left sum	            O(n)	O(1)	✅ Best

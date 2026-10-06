@@ -6,3 +6,7 @@ WTD: Sort an array using Bitonic Sort.
 Bitonic Sort: First produces a bitonic sequence and then iteratively sorts that sequence.  
 
 (e.g.: I/P: [3, 10, 2, 1, 20]; O/P: [1, 2, 3, 10, 20])
+
+
+Bitonic Sort
+A parallel sorting algorithm that converts an arbitrary sequence into a bitonic sequence (first increasing, then decreasing), then repeatedly splits and merges it into a fully sorted array. Very fast on parallel architectures like GPUs.

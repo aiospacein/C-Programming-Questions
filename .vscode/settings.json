@@ -1,4 +1,5 @@
 {
+  "editor.wordWrap": "on",
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",

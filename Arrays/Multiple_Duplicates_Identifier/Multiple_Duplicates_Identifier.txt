@@ -3,3 +3,10 @@ Find duplicate numbers in an array if it contains multiple duplicates.
 WTD: Examine the array to identify numbers that appear more than once. Compile a list of these repetitive numbers.
 
 (e.g.: I/P: [4,3,2,7,8,2,3,1], O/P: [2,3] )
+
+
+Approach	                    Time	Extra Space	Keeps original array?	Verdict
+Hash map / frequency table	    O(n) avg.	O(n)	✅	🥇 Best general approach
+Sort + scan	                    O(n log n)	O(1)*	❌ modifies/order changes	🥈 Best if no extra memory
+Nested comparison	            O(n²)	O(1)	✅	🥉 Simple but slow
+Boolean/frequency array	        O(n + range)	O(range)	✅	🥇 if value range is small

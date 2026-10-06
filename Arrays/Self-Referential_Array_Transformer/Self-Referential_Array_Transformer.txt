@@ -1,5 +1,13 @@
-Rearrange array such that arr[i] becomes arr[arr[i]].
+Rearrange array such that arr[i] becomes arr[arr[i]]. new_arr[i] = old_arr[old_arr[i]]
 
 WTD: Transform the array such that the number at each index corresponds to the number found at the index from the original array specified by the current number.
 
 (e.g.: I/P: [0, 1, 2, 3], O/P: [0, 1, 2, 3])
+
+
+
+Approach	                        Time	Extra Space	Modifies Original Array	Stable/Correct	Verdict
+Temporary array	                    O(n)	O(n)	✅	✅	🥇 Best/simple
+In-place encoding (% n, / n)	    O(n)	O(1)	✅	✅	🥇 Best if O(1) required
+Direct arr[i] = arr[arr[i]]	        O(n)	O(1)	✅	❌	🚫 Wrong
+Copy/duplicate whole array first	O(n)	O(n)	✅	✅	Same idea as temp array

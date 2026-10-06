@@ -1,0 +1,171 @@
+1. Array / sequence terminology
+========================================================
+Term	Exact meaning	Example with [1,2,3,4,5]
+Consecutive	Difference is exactly 1	2,3,4
+Contiguous	Physically adjacent elements	2,3,4
+Increasing	Each next value is greater	1,3,7,9
+Strictly increasing	Each next value > previous	1,3,7,9
+Non-decreasing	Each next value >= previous	1,2,2,4
+Decreasing	Each next value is smaller	9,7,3,1
+Strictly decreasing	Each next value < previous	9,7,3,1
+Non-increasing	Each next value <= previous	9,7,7,3
+Sorted	Arranged according to an ordering	1,2,3,5
+Ascending	Sorted smallest → largest	1,2,5,9
+Descending	Sorted largest → smallest	9,5,2,1
+Adjacent	Directly next to each other	arr[i], arr[i+1]
+Successive	One immediately follows another in a sequence	3,4,5
+Duplicate	Same value occurs more than once	2,2
+Unique	No repeated values	1,2,3
+Distinct	Different values; duplicates removed conceptually	{1,2,3}
+
+
+2. Subarray / subsequence terminology
+=====================================================
+Term	Meaning	Example
+Subarray	Contiguous portion of an array	[2,3,4] from [1,2,3,4,5]
+Substring	Contiguous portion of a string	"ell" from "hello"
+Subsequence	Elements remain in original order, but can skip elements	[1,3,5] from [1,2,3,4,5]
+Subset	Any selection; order generally doesn't matter	{1,5}
+Sublist	Portion/selection of a list; meaning depends on context	[2,3]
+Prefix	Starts at the first element	[1,2,3]
+Suffix	Ends at the last element	[3,4,5]
+Subsegment	Usually same idea as contiguous subarray	[2,3,4]
+
+3. Relationship terminology
+================================================
+Term	Meaning
+Predecessor	Element/value immediately before another
+Successor	Element/value immediately after another
+Previous	Earlier element
+Next	Later element
+Neighbor	Usually directly adjacent element
+Parent	Node directly above another node in a tree
+Child	Node directly below another node
+Sibling	Nodes sharing the same parent
+Ancestor	Any node above another node
+Descendant	Any node below another node
+Root	Top node of a tree
+Leaf	Node with no children
+
+4. Ordering/comparison terminology
+=================================================
+Term	Meaning
+a < b	a is smaller
+a > b	a is larger
+a <= b	a is smaller or equal
+a >= b	a is larger or equal
+Ascending	Small → large
+Descending	Large → small
+Increasing	Moving toward larger values
+Decreasing	Moving toward smaller values
+Strictly increasing	Every step is >
+Non-decreasing	Every step is >=
+Monotonic increasing	Never decreases
+Monotonic decreasing	Never increases
+
+
+5. Array-position terminology
+==============================
+Term	Meaning
+Index	Position of an element
+Element	Individual value
+Position	Location in sequence
+Range	Interval of indices/values
+Interval	Continuous numerical range
+Length	Number of elements
+Size	Usually number of elements
+Capacity	Allocated storage available
+Offset	Distance from a starting position
+Slice	Selected portion of an array/string
+
+
+6. Frequency terminology
+========================================
+Term	Meaning
+Frequency	Number of occurrences
+Count	Number of occurrences
+Occurrence	One appearance
+Duplicate	Appears multiple times
+Unique	Appears exactly once / no repetition depending on context
+Distinct	Different values
+Multiplicity	Number of times a value occurs
+
+7. Common algorithm terminology
+==============================================
+Term	Meaning
+Traversal	Visiting elements/nodes
+Scan	Sequentially examining elements
+Search	Looking for a value/property
+Iteration	One repetition of a loop
+Pass	One complete traversal through data
+Partition	Divide data into groups
+Merge	Combine sorted/data structures
+Filter	Keep elements satisfying a condition
+Reduce	Combine many values into one result
+Aggregate	Accumulate information
+In-place	Modify original data using little extra memory
+Stable	Equal elements preserve relative order
+Online	Process data as it arrives
+Offline	Have all data before processing
+
+8. Complexity terminology
+=================================================
+Term	Meaning
+Time complexity	How runtime grows with input
+Space complexity	How memory usage grows
+Auxiliary space	Extra memory excluding input
+Constant space	O(1) extra memory
+Linear	O(n)
+Logarithmic	O(log n)
+Quadratic	O(n²)
+Amortized	Average cost over a sequence of operations
+Worst case	Maximum possible cost
+Average case	Expected/average cost
+Best case	Minimum possible cost
+
+
+9. Very important words to distinguish
+=========================================
+CONSECUTIVE
+    ↓
+difference = 1
+
+CONTIGUOUS
+    ↓
+physically adjacent
+
+SUBARRAY
+    ↓
+contiguous elements
+
+SUBSEQUENCE
+    ↓
+order preserved, gaps allowed
+
+SUBSET
+    ↓
+selection, order generally irrelevant
+
+SORTED
+    ↓
+ordered according to comparison
+
+INCREASING
+    ↓
+each next value is larger
+
+STRICTLY INCREASING
+    ↓
+each next value is strictly larger
+
+NON-DECREASING
+    ↓
+next >= previous
+
+UNIQUE
+    ↓
+no repetition / depending on context
+
+DISTINCT
+    ↓
+different values

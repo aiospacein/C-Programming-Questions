@@ -5,3 +5,7 @@ WTD: Sort an array using shell sort with a dynamic gap sequence.
 Shell Sort: A generalization of insertion sort that works by comparing elements that are distant rather than adjacent.
 
 (e.g.: I/P: [9, 8, 3, 7, 5, 6, 4, 1]; O/P: [1, 3, 4, 5, 6, 7, 8, 9])
+
+
+Dynamic Gap Shell Sort
+A variation of Shell Sort where the gap sequence between compared elements is generated or adjusted dynamically (e.g., using formulas like Ciura, Sedgewick, or Knuth gaps) to optimize performance over static gap choices.

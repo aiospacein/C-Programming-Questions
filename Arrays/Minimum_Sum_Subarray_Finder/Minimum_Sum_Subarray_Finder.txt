@@ -3,3 +3,17 @@ Find the subarray with the least sum.
 WTD: Investigate all possible subarrays of the given array, finding the one with the smallest sum.
 
 (e.g.: I/P: [3,1,-4,2,0], O/P: -4)
+
+Best approach: Minimum Kadane's Algorithm
+
+Maintain two values:
+
+currentMin
+globalMin
+
+
+Approach	                    Time	Extra Space	Verdict
+Minimum Kadane	                O(n)	O(1)	🥇 Best
+Prefix sums + checking pairs	O(n²)	O(n)	🥈
+Brute-force all subarrays	    O(n²)	O(1)	Good for learning only
+Sort	Doesn't solve it	    —	❌

@@ -3,3 +3,11 @@ Find the missing number in a given integer array of 1 to 500.
 WTD: Examine an array expected to contain consecutive integers from 1 to 500. Identify any integer that is missing from this sequence.
 
 (e.g.: I/P: [1,2,4,5], O/P: 3)
+
+
+Approach	                Time	Extra Space	Verdict
+Sum formula	                O(n)	O(1)	🥇 Best
+XOR	O(n)	                O(1)	🥈 Excellent
+Boolean/frequency array	    O(n)	O(500)	🥉 Fine
+Sort + scan	                O(n log n)	Depends	❌ Unnecessary
+Brute-force search	        O(n²)	O(1)	❌ Avoid

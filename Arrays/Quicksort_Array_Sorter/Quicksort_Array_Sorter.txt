@@ -3,3 +3,6 @@ Sort an Array  using quick sort algorithm
 WTD: Implement the quicksort sorting technique on the provided array to rearrange its elements in ascending order.
 
 (e.g.: I/P: [64, 34, 25, 12, 22, 11, 90], O/P: [11, 12, 22, 25, 34, 64, 90] )
+
+Its devide and conquore 
+Quick Sort	Picking a benchmark (Pivot)	You pick one number (the Pivot). Everyone smaller than the pivot goes to the left wall; everyone larger goes to the right wall. Repeat for both sides.

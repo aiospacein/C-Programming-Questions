@@ -3,3 +3,11 @@ Find the two repeating elements in a given array.
 WTD: Investigate the array and find two numbers that each appear more than once.
 
 (e.g.: I/P: [4, 2, 4, 5, 2, 3, 1], O/P: [4,2] )
+
+
+Approach	            Time	    Extra Space	Modifies Array	Verdict
+Frequency array	        O(n)	    O(n)	❌	🥇 If values are 1..n
+Hash table	            O(n) avg.	O(n)	❌	🥇 Arbitrary values
+Sort + scan	            O(n log n)	O(1)*	✅	🥈 No extra memory
+Nested comparison	    O(n²)	    O(1)	❌	🥉 Simple
+Mathematical/XOR	    O(n)	    O(1)	❌	⚠️ Specialized

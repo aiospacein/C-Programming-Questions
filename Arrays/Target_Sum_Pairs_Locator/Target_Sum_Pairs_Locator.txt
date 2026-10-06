@@ -3,3 +3,9 @@ Find all pairs of an integer array whose sum is equal to a given number.
 WTD: Explore combinations of integer pairs in the array. Check if the sum of any of these pairs matches a specified target number.
 
 (e.g.: I/P: [2,4,3,5,6,-2,4,7,8,9], Sum: 7, O/P: [2,5],[4,3] )
+
+Approach	Time	Extra Space	Verdict
+Hash set/table	O(n) avg.	O(n)	🥇 Best general
+Sort + two pointers	O(n log n)	O(1)*	🥈 Excellent
+Brute-force nested loops	O(n²)	O(1)	🥉 Simple
+For every x, binary search target-x	O(n log n)	O(1)	Good if already sorted

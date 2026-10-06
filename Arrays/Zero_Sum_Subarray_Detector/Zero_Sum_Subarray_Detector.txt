@@ -3,3 +3,10 @@ Find if there's a subarray with zero sum.
 WTD: Explore the array's subarrays (subsets of consecutive elements) to determine if there exists any subarray that sums up to zero.
 
 (e.g.: I/P: [4, 2, -3, 1, 6], O/P: True )
+
+
+Approach	Time	Extra Space	Verdict
+Prefix sum + hash set	O(n) avg.	O(n)	🥇 Best
+Prefix sum + sort	O(n log n)	O(n)	🥈
+Brute-force all subarrays	O(n²)	O(1)	🥉 Simple
+Nested loops + running sum

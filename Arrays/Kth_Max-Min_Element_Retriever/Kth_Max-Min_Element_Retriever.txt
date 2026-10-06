@@ -3,3 +3,10 @@ Find the "Kth" max and min element of an array.
 WTD: Sort the array and retrieve the kth largest and kth smallest numbers.
 
 (e.g.: I/P: [7, 10, 4, 3, 20, 15], K=3, O/P: 7 )
+
+
+Requirement	                                        Best approach	Time
+Need both Kth min and max, array can be modified	Sort once	    O(n log n)
+K is small compared with n	                        Heap / selection	O(n log K)
+Need only one element, optimal average performance	Quickselect	O(n) average
+Need guaranteed worst-case                          linear time	Median-of-medians	O(n) worst case

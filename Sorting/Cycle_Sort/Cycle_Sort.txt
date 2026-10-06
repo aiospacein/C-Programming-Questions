@@ -6,3 +6,7 @@ WTD: Sort an array in-place using Cycle Sort.
 Cycle Sort: An in-place, unstable sorting algorithm that is optimal in terms of the total number of writes to the original array.
 
 (e.g.: I/P: [20, 40, 50, 10, 30]; O/P: [10, 20, 30, 40, 50])
+
+
+Cycle Sort
+An in-place, non-stable sorting algorithm optimal for memory writes. It finds the exact final target position for each element and cycles them into place, minimizing total memory write operations to at most $N-1$.

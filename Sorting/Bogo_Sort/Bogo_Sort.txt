@@ -6,3 +6,5 @@ WTD: Sort an array using Bogo Sort.
 Bogo Sort: Randomly permutes its input until a sorted sequence is produced.  
 
 (e.g.: I/P: [3, 0, 2, 5, -1, 4, 1]; O/P: [-1, 0, 1, 2, 3, 4, 5])
+
+Bogo SortA joke/esoteric algorithm. It randomly shuffles the array over and over until it happens to land in sorted order. Has an average time complexity of $O(N \cdot N!)$.
